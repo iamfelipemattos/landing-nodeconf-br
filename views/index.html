@@ -4,25 +4,27 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title></title>
-    <link rel="stylesheet" href="../assets/css/stylesheet.css">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Armata" rel="stylesheet" type="text/css">
 </head>
 <body>
     <div class="container">
-        <section class="content">
+        <header class="home">
             <div class="logo"></div>
-            <p>tema:<span> nodeconfbr2015</span></p>
-            <p>24 de junho 2015</p>
+            <p>tema:<span class="event"> nodeconfbr2015</span></p>
+            <p><span class="date">24 de junho 2015</span></p>
             <br/>
 
-            <p><span>ingressos: R$ 80,00</span></p>
+            <p><span class="ticket">ingressos: R$ 80,00</span></p>
             <p>1º lote até 25 de abril</p>
             <a class="btn-sponsor" href="#">seja patrocinador</a>
-        </section>
+        </header>
 
         <section class="about">
             <h1>o evento</h1>
             <p>
-                Node is similar in design to and influenced by systems like Ruby's Event Machine or Python's Twisted. Node takes the event model a bit further: it presents the event loop as a language construct instead of as a library. In other systems there is always a blocking call to start the event-loop. Typically one defines behavior through callbacks at the beginning of a script and at the end starts a server through a blocking call like
+                Node is similar in design to and influenced by systems like Ruby"s Event Machine or Python"s Twisted. Node takes the event model a bit further: it presents the event loop as a language construct instead of as a library. In other systems there is always a blocking call to start the event-loop. Typically one defines behavior through callbacks at the beginning of a script and at the end starts a server through a blocking call like
                 EventMachine run().
             </p>
             <a class="btn-about" href="#">seja patrocinador</a>
@@ -31,39 +33,39 @@
         <section class="partners">
             <h1>apoio</h1>
             <p>
-                Node is similar in design to and influenced by systems like Ruby's Event Machine or Python's Twisted. Node takes the event model a bit further: it presents the event loop as a language construct instead of as a library.
+                Node is similar in design to and influenced by systems like Ruby"s Event Machine or Python"s Twisted. Node takes the event model a bit further: it presents the event loop as a language construct instead of as a library.
             </p>
 
             <ul class="partners-list">
                 <li>
                     <a href="#" target="_blank">
-                        <img src="http://dummyimage.com/800x600/cccccc/ffffff.gif&text=partners" alt="partners">
+                        <img src="../assets/images/locaweb.png" height="59" width="250"alt="partners">
                     </a>
                 </li>
                 <li>
                     <a href="#" target="_blank">
-                        <img src="http://dummyimage.com/800x600/cccccc/ffffff.gif&text=partners" alt="partners">
+                        <img src="../assets/images/globo.png" height="95" width="160" alt="partners">
                     </a>
                 </li>
                 <li>
                     <a href="#" target="_blank">
-                        <img src="http://dummyimage.com/800x600/cccccc/ffffff.gif&text=partners" alt="partners">
+                        <img src="../assets/images/paypal.png" height="60" width="225" alt="partners">
 
                     </a>
                 </li>
                 <li>
                     <a href="#" target="_blank">
-                        <img src="http://dummyimage.com/800x600/cccccc/ffffff.gif&text=partners" alt="partners">
+                        <img src="../assets/images/nic-br.png" height="80" width="140" alt="partners">
                     </a>
                 </li>
                 <li>
                     <a href="#" target="_blank">
-                        <img src="http://dummyimage.com/800x600/cccccc/ffffff.gif&text=partners" alt="partners">
+                        <img src="../assets/images/uol-host.png" height="55" width="265" alt="partners">
                     </a>
                 </li>
                 <li>
                     <a href="#" target="_blank">
-                        <img src="http://dummyimage.com/800x600/cccccc/ffffff.gif&text=partners" alt="partners">
+                        <img src="../assets/images/gvt.png" height="75" width="135" alt="partners">
                     </a>
                 </li>
             </ul>
@@ -71,22 +73,27 @@
         </section>
 
         <section class="newsletter">
-            <span>newsletter</span>
+            <h1>newsletter</h1>
                 <form class="form-singup">
-                    <input type="text" name="name" id="name" placeholder="nome" required />
-                    <input type="email" name="email" id="email" placeholder="e-mail" required />
+                    <input type="text" name="name" id="name" placeholder="nome" required/>
+                    <input type="email" name="email" id="email" placeholder="e-mail"  required/>
                     <button id="signup" class="btn-signup">inscreva-se</button>
                 </form>
-                <div id="error" class="error centered"> msg error </div>
-            </div>
-            <!-- <a class="btn-newsletter" href="#">inscreva-se</a> -->
+                <div id="error" class="error centered">msg error</div>
         </section>
 
-
-
-    <footer>
-
-    </footer>
+        <footer>
+            <ul class="social-icons">
+              <li><i class="fa fa-twitter"></i><a href="#" target="_blank"></a></li>
+              <li><i class="fa fa-instagram"></i><a href="#" target="_blank"></a></li>
+              <li><i class="fa fa-youtube"></i><a href="#" target="_blank"></a></li>
+              <li><i class="fa fa-github"></i><a href="#" target="_blank"></a></li>
+            </ul>
+            <div class="credits">
+                <span>©nodeconfbr2015</span><a href="#"><img src="../assets/images/86.svg"></a>
+            </div>
+        </footer>
+    </div>
     <script src="../src/source.js" type="text/javascript" charset="utf-8" ></script>
 </body>
 </html>
