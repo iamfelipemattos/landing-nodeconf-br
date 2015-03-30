@@ -1,2 +1,3 @@
-node_modules/*
-dist/*
+assets/images/logo.png
+gulpfile.js
+package.json
