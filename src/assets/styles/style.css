@@ -5,6 +5,7 @@ body {
   padding: 0;
 }
 .container {
+  position: absolute;
   height: 100%;
 }
 header {
@@ -131,7 +132,7 @@ header .btn-sponsor:hover {
   font-family: 'Montserrat', sans-serif;
   font-size: 48px;
   font-weight: bold;
-  margin: 0 0 40px;
+  margin: 100px 0 40px;
   text-align: center;
   text-transform: uppercase;
   z-index: 2;
@@ -195,8 +196,10 @@ header .btn-sponsor:hover {
   color: #494947;
 }
 .partners .partners-list {
+  position: absolute;
+  left: 100px;
   display: inline-block;
-  width: 85%;
+  width: auto;
   height: auto;
   list-style-type: none;
 }	
