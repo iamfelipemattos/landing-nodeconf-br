@@ -37,6 +37,7 @@ header .menu li {
    padding-left: 1em;
    text-indent: -.7em;
    margin: 10px auto;
+   position: relative;
 }
 header .menu li:after {
    content: "";
@@ -44,16 +45,18 @@ header .menu li:after {
    height: 10px;
    border: 0;
    border-radius: 10px;
-   background-color: #93b93a;
-    position: absolute;
-    margin: 7px 10px;
+   background-color: #6A862A;
+   position: absolute;
+   margin: 7px 10px;
+   top: 0;
 }
 header .menu li a {
-  color: #FFF;
+  color: #6A862A;
   text-decoration: none;
+  transition: all .3s ease-out;
 }
 header .menu li a:hover {
-    color: #000;
+    color: #CCC;
 }
 header p {
   font-family: 'Montserrat', sans-serif;
@@ -90,6 +93,7 @@ header .btn-sponsor {
   border: 0;
   border-radius: 5px;
   background-color: #93b93a;
+  transition: all .3s ease-out;
 }
 header .btn-sponsor:hover {
   cursor: pointer;
@@ -120,7 +124,6 @@ header .btn-sponsor:hover {
   bottom: 0;
   left: 0;
   content: '';
-  opacity: 0.4;
   opacity: 0.9;
   background: #93b93a;
 }
@@ -158,6 +161,7 @@ header .btn-sponsor:hover {
   background-color: transparent;
   z-index: 2;
   top: 80px;
+  transition: all .3s ease-out;
 }
 .about .btn-about:hover {
   cursor: pointer;
@@ -197,21 +201,30 @@ header .btn-sponsor:hover {
   display: inline-block;
   width: auto;
   height: auto;
-  margin: 143 auto;
   list-style-type: none;
-}
+}	
 .partners .partners-list > li {
   float: left;
   width: 372px;
   height: 168px;
   margin: 0 5px 5px 0;
-  background-color: #f9f9f9;
+  background-color: #FFF;
+  border: solid 1px #f9f9f9;
+   position: relative;
+  transition: all .3s ease-out;
+}
+.partners .partners-list > li:hover{
+	-webkit-box-shadow: 0px 0px 15px 0px rgba(117,117,117,0.4);
+-moz-box-shadow: 0px 0px 15px 0px rgba(117,117,117,0.4);
+box-shadow: 0px 0px 15px 0px rgba(117,117,117,0.4);
 }
 .partners .partners-list li > a {
   position: absolute;
-}
-.partners .partners-list li > a > img {
-  margin: 50px -100px;
+  top: 0;  
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 .partners .btn-partners {
   font-family: 'Montserrat', sans-serif;
@@ -227,6 +240,7 @@ header .btn-sponsor:hover {
   border: 2px solid #494947;
   border-radius: 5px;
   background-color: transparent;
+  transition: all .3s ease-out;
 }
 .partners .btn-partners:hover {
   cursor: pointer;
@@ -273,8 +287,9 @@ header .btn-sponsor:hover {
   text-transform: uppercase;
   color: #93b93a;
   border: 0;
-  border-radius: 5px;
+  border-radius: 10px;
   background-color: #494947;
+  vertical-align: top;
 }
 .newsletter .error {
   display: none;
@@ -284,11 +299,12 @@ header .btn-sponsor:hover {
 }
 .form-singup input {
   font-family: 'Montserrat', sans-serif;
-  width: 452px;
-  height: 60px;
-  margin-left: 5px;
+  width: 410px;
+  margin-left: 20px;
   border: 0;
   border-radius: 5px;
+  font-size: 25px;
+  padding: 15px 20px;
 }
 ::-webkit-input-placeholder {
   font-size: 24px;
