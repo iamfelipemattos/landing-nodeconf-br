@@ -1,0 +1,7 @@
+{
+  "name": "landing-nodeconf-br",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.3"
+  }
+}
