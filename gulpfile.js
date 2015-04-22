@@ -5,10 +5,16 @@ var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var browserSync = require('browser-sync');
 var reload = browserSync.reload;
+var jeet = require('jeet');
+var rupture = require('rupture');
 
 gulp.task('styles', function () {
-  return gulp.src('app/styles/main.css')
+  return gulp.src('app/styles/main.styl')
     .pipe($.sourcemaps.init())
+    .pipe($.stylus({
+        'include css': true,
+        use: [jeet(), rupture()]
+    }).on('error', $.util.log))
     .pipe($.postcss([
       require('autoprefixer-core')({browsers: ['last 1 version']})
     ]))
@@ -89,7 +95,7 @@ gulp.task('serve', ['styles', 'fonts'], function () {
     '.tmp/fonts/**/*'
   ]).on('change', reload);
 
-  gulp.watch('app/styles/**/*.css', ['styles']);
+  gulp.watch('app/styles/**/*.{css,styl}', ['styles']);
   gulp.watch('app/fonts/**/*', ['fonts']);
   gulp.watch('bower.json', ['wiredep', 'fonts']);
 });
