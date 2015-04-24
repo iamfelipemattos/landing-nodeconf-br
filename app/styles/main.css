@@ -41,7 +41,7 @@ header .menu li {
    position: relative;
 }
 header .menu li:after {
-   content: ';
+   content: '';
    width: 10px;
    height: 10px;
    border: 0;
