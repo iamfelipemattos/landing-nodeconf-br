@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html itemscope itemtype="http://schema.org/Event">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>NodeConfBR 2015</title>
 
     <!-- build:css styles/app.min.css -->
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/neysimoes/reset-css/master/reset.css">
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 
@@ -25,104 +27,87 @@
     <!-- endbuild -->
 </head>
 <body>
-    <div class="container">
-        <header id="home">
-             <ul class="menu">
-                <li>
-                    <a href="#home">Home</a>
-                </li>
-                <li>
-                    <a href="#about">Sobre</a>
-                </li>
-                <li>
-                    <a href="#partners">Apoio</a>
-                </li>
-                <li>
-                    <a href="#newsletter">Newsletter</a>
-                </li>
-            </ul>
-            <div class="logo"></div>
-            <p>tema:<span class="event"> nodeconfbr2015</span></p>
-            <p><span class="date">24 de junho 2015</span></p>
-            <br/>
 
-            <p><span class="ticket">ingressos: R$ 80,00</span></p>
-            <p>1º lote até 25 de abril</p>
-            <a class="btn-sponsor" href="#">seja patrocinador</a>
-        </header>
+    <header>
+        <div class="event-cover">
+            <div class="content">
+                <div class="event-logo"></div>
+                <div class="event-theme">
+                    TEMA: <span class="event-name" itemprop="name">NodeConfBR 2015</span>
+                </div>
+                <div class="event-date">24 de junho 2015</div>
+                <div class="event-info">
+                    Ingressos: R$ 80,00
+                    <div class="event-tickets">
+                        1º lote até 25 de abril
+                    </div>
+                </div>
+                <a href="#" class="partner-button">Seja Patrocinador</a>
+            </div>
+        </div>
+    </header>
 
-        <section id="about" class="about">
-            <h1>o evento</h1>
-            <p>
-                Node is similar in design to and influenced by systems like Ruby"s Event Machine or Python"s Twisted. Node takes the event model a bit further: it presents the event loop as a language construct instead of as a library. In other systems there is always a blocking call to start the event-loop. Typically one defines behavior through callbacks at the beginning of a script and at the end starts a server through a blocking call like
-                EventMachine run().
-            </p>
-            <a class="btn-about" href="#">seja patrocinador</a>
+    <main>
+
+        <section id="event-about">
+            <div class="content">
+                <h2 class="event-about-title">O Evento</h2>
+                <div class="event-about-content" itemprop="description">
+                    <p>Node is similar in design to and influenced by systems like Ruby"s Event Machine or Python"s Twisted. Node takes the event model a bit further: it presents the event loop as a language construct instead of as a library. In other systems there is always a blocking call to start the event-loop. Typically one defines behavior through callbacks at the beginning of a script and at the end starts a server through a blocking call like
+                    EventMachine run().</p>
+                </div>
+                <div class="event-partner-button">
+                  <a href="#" class="partner-button-alt">Seja Patrocinador</a>
+                </div>
+            </div>
         </section>
 
-        <section id="partners" class="partners">
-            <h1>apoio</h1>
-            <p>
-                Node is similar in design to and influenced by systems like Ruby"s Event Machine or Python"s Twisted. Node takes the event model a bit further: it presents the event loop as a language construct instead of as a library.
-            </p>
+        <section id="event-partner">
+            <div class="content">
+                <h2 class="event-partner-title">Apoio</h2>
+                <div class="event-partner-content">
+                    <p>Node is similar in design to and influenced by systems like Ruby"s Event Machine or Python"s Twisted. Node takes the event model a bit further: it the event loop as a language construct instead of as a library.</p>
 
-            <ul class="partners-list">
-                <li>
-                    <a href="#" target="_blank">
-                        <img src="images/partner-locaweb.png" height="59" width="250"alt="partners">
-                    </a>
-                </li>
-                <li>
-                    <a href="#" target="_blank">
-                        <img src="images/partner-globo.png" height="95" width="160" alt="partners">
-                    </a>
-                </li>
-                <li>
-                    <a href="#" target="_blank">
-                        <img src="images/partner-paypal.png" height="60" width="225" alt="partners">
-
-                    </a>
-                </li>
-                <li>
-                    <a href="#" target="_blank">
-                        <img src="images/partner-nic-br.png" height="80" width="140" alt="partners">
-                    </a>
-                </li>
-                <li>
-                    <a href="#" target="_blank">
-                        <img src="images/partner-uol-host.png" height="55" width="265" alt="partners">
-                    </a>
-                </li>
-                <li>
-                    <a href="#" target="_blank">
-                        <img src="images/partner-gvt.png" height="75" width="135" alt="partners">
-                    </a>
-                </li>
-            </ul>
-            <a class="btn-partners" href="#">seja patrocinador</a>
+                    <ul class="partner-list">
+                        <li class="partner-item"><a href="#" target="_blank"><img src="images/partner-locaweb.png" alt="partners"></a></li>
+                        <li class="partner-item"><a href="#" target="_blank"><img src="images/partner-globo.png" alt="Partner Globo.com"></a></li>
+                        <li class="partner-item"><a href="#" target="_blank"><img src="images/partner-paypal.png" alt="Partner Paypal">
+                        </a></li>
+                        <li class="partner-item"><a href="#" target="_blank"><img src="images/partner-nic-br.png" alt="Partnet"></a></li>
+                        <li class="partner-item"><a href="#" target="_blank"><img src="images/partner-uol-host.png" alt="partners"></a></li>
+                        <li class="partner-item"><a href="#" target="_blank"><img src="images/partner-gvt.png" alt="partners"></a></li>
+                    </ul>
+                </div>
+                <div class="event-partner-button oh-my-head">
+                  <a href="#" class="partner-button-alt">Seja Patrocinador</a>
+                </div>
+            </div>
         </section>
 
-        <section id="newsletter" class="newsletter">
-            <h1>newsletter</h1>
-                <form class="form-singup">
+        <section id="event-newsletter">
+            <div class="content">
+                <h2 class="event-newsletter-title">Newsletter</h2>
+                <div class="event-newsletter-content">
+                  <form class="event-newsletter-signup">
                     <input type="text" name="name" id="name" placeholder="nome"/>
                     <input type="email" name="email" id="email" placeholder="e-mail"/>
-                    <button id="signup" class="btn-signup">inscreva-se</button>
+                    <input type="submit" id="signup" class="newsletter-button" value="inscreva-se">
                 </form>
-                <div id="error" class="error centered">msg error</div>
+                </div>
+            </div>
         </section>
 
-        <footer id="footer">
-            <ul class="social-icons">
-              <li><i class=""></i><a href="#" target="_blank"></a></li>
-              <li><i class=""></i><a href="#" target="_blank"></a></li>
-              <li><i class=""></i><a href="#" target="_blank"></a></li>
-              <li><i class=""></i><a href="#" target="_blank"></a></li>
-            </ul>
-            <div class="credits">
-                <span>©nodeconfbr2015</span>Made with<span class="love">♥</span>by community.
+    </main>
+
+    <footer>
+        <div class="content">
+            <div class="event-network">
+              <ul class="event-network-list">
+              </ul>
             </div>
-        </footer>
-    </div>
+            <div class="event-copyright">&copy;NodeConfBR 2015.</div></div>
+        </div>
+    </footer>
+
 </body>
 </html>

@@ -1,0 +1,229 @@
+@import 'jeet'
+
+/*
+  Variables
+*/
+
+// Sizes
+title_size      = 2.5em
+content_size    = 1.5em
+content_width   = 960px
+
+// Colors
+primary_color   = #93b93a
+secondary_color = #6A862A
+
+// Fonts
+main_font    = 'Open Sans'
+primary_font = 'Montserrat'
+
+/*
+  Mixins
+*/
+base_title()
+  font-size title_size
+  +below(480px)
+    font-size 2em
+  text-transform uppercase
+  font-weight bold
+  text-align center
+  padding 30px 0
+  font-family primary_font, sans-serif
+
+base_content()
+  padding-bottom 50px
+  font-size content_size
+  +below(480px)
+    font-size 1.3em
+  text-align justify
+  text-align left
+  font-family main_font, sans-serif
+/*
+  Helpers
+*/
+.oh-my-head
+  margin-top 50px
+
+/*
+  Basic Theme Styles
+*/
+body
+  margin 0
+  padding 0
+  font-size 100%
+  font-family main_font, sans-serif
+
+header
+  min-height 100%
+  text-transform uppercase
+  color white
+  font-family primary_font, sans-serif
+  cf()
+
+section
+  cf()
+
+.content
+  center(content_width)
+
+  p
+    padding-left 50px
+    padding-right 50px
+
+footer
+  center(content_width)
+  cf()
+  text-transform uppercase
+  font-size .8em
+  font-weight bold
+  padding-bottom 15px
+
+/*
+  Components
+*/
+.event-partner-button {
+  width 100%
+  text-align center
+  padding-bottom 50px
+}
+.partner-button
+  font-family primary_font, sans-serif
+  color white
+  text-transform uppercase
+  font-size 100%
+  text-decoration none
+  padding: 15px 20px;
+  border-radius 5px
+  background-color #93b93a
+  transition all .3s ease-out
+
+  &:hover
+    cursor: pointer;
+    background-image: linear-gradient(to bottom, transparent, rgba(0,0,0,0.15));
+
+.partner-button-alt
+  font-family primary_font, sans-serif
+  color #333
+  text-transform uppercase
+  font-size 1em
+  text-decoration none
+  padding: 15px 20px;
+  border 2px solid #333
+  border-radius 5px
+  background transparent
+  transition all .3s ease-out
+
+  &:hover
+    cursor pointer
+    color white
+    background #333
+/*
+  Sections
+*/
+
+// Intro
+.event-cover
+  background url('../images/bg-header.jpg') no-repeat
+  background-size cover
+  text-align center
+
+  .content
+    padding-top 25px
+    padding-bottom 50px
+
+.event-logo
+  margin 0 auto
+  max-width 100%
+  width 450px
+  height 200px
+  background url('../images/logo.svg') no-repeat center transparent
+  background-size 100%
+
+.event-theme
+  font-size 2em
+
+.event-name
+  color primary_color
+  font-weight bold
+
+.event-info
+  font-size 1.5em
+  margin-top 15px
+  margin-bottom 70px
+  color secondary_color
+
+.event-tickets
+  color #FFF
+
+.event-date
+  font-size 1.5em
+
+// About
+
+#event-about
+  background url('../images/bg-event-green.jpg') no-repeat
+  background-size cover
+
+.event-about-title
+  color white
+  base_title()
+
+.event-about-content
+  color white
+  base_content()
+
+// Partners
+
+#event-partner
+  background-color white
+
+.event-partner-title
+  color #333
+  base_title()
+
+.partner-list
+  margin-top 50px
+  padding 0
+  +below(1200)
+    padding 15px
+
+.partner-item
+  col(1/3, cycle: 3)
+  list-style none
+  text-align center
+  vertical-align middle
+  background-color #f9f9f9
+  height 150px
+  margin-bottom 3%
+  // align center
+  img
+    max-width 100%
+    height auto
+
+.event-partner-content
+  base_content()
+  cf()
+  padding-bottom 0px
+
+// NewsLetter
+
+#event-newsletter
+  background-color #82b927
+
+.event-newsletter-title
+  color #333
+  base_title()
+
+.event-newsletter-content
+  base_content()
+
+.event-newsletter-signup
+  input
+    font-family main_font, sans-serif
+    text-transform uppercase
+    font-weight bold
+    color primary_color
+    border 0
+    margin 5px
+    width 100%
+    col(1/3)
