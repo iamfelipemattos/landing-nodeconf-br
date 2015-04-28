@@ -1,4 +1,4 @@
-{
+ {
   "private": true,
   "engines": {
     "node": ">=0.10.0"
@@ -6,6 +6,7 @@
   "scripts": {
     "install": "bower install",
     "build": "gulp",
+    "deploy": "gulp clean && gulp deploy",
     "start": "gulp serve"
   },
   "devDependencies": {
