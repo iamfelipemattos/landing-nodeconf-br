@@ -32,7 +32,7 @@ $(function() {
         $content.height(screenHeight);
       }
     });
-  }
+  };
 
-  $(window).bind("orientationchange resize pageshow", loadFullHeight);
+  $(window).bind('orientationchange resize pageshow', loadFullHeight);
 });
