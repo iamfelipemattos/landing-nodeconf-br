@@ -7,7 +7,8 @@
     "install": "bower install",
     "build": "gulp",
     "deploy": "gulp clean && gulp deploy",
-    "start": "gulp serve"
+    "start": "gulp serve",
+    "test": "npm run build"
   },
   "devDependencies": {
     "autoprefixer-core": "^4.0.2",

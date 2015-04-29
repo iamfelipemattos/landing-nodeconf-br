@@ -23,7 +23,7 @@ $(function() {
 
   var loadFullHeight = function() {
     var screenHeight = $(window).height();
-    if (screenHeight > 768) return;
+    if (screenHeight > 768) { return; }
     $('.event-cover, #event-about, #event-partner').each(function(index, item) {
       var $content = $(item);
       var contentHeight = $content.height();
@@ -32,7 +32,7 @@ $(function() {
         $content.height(screenHeight);
       }
     });
-  }
+  };
 
-  $(window).bind("orientationchange resize pageshow", loadFullHeight);
+  $(window).bind('orientationchange resize pageshow', loadFullHeight);
 });
