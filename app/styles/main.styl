@@ -8,6 +8,7 @@
 title_size      = 2.5em
 content_size    = 1.3em
 content_width   = 960px
+content_pad  = 30px
 
 // Colors
 primary_color   = #93b93a
@@ -57,7 +58,7 @@ section
   cf()
 
 .content
-  center(content_width, pad: 50px)
+  center(content_width, pad: content_pad)
 
 /*
   Components
@@ -79,6 +80,9 @@ section
   background-color transparent
   transition all .3s ease-out
 
+  +below(330px)
+    font-size .9em
+
   &:hover
     cursor pointer
     background-color #93b93a
@@ -94,6 +98,9 @@ section
   border-radius 5px
   background transparent
   transition all .3s ease-out
+
+  +below(330px)
+    font-size .9em
 
   &:hover
     cursor pointer
@@ -231,7 +238,6 @@ section
   .newsletter-button
     +below(640px)
       stack()
-
     font-family primary_font, sans-serif
     color #333
     text-transform uppercase
@@ -251,7 +257,7 @@ section
 
 // Footer
 footer
-  center(content_width, pad: 50px)
+  center(content_width, pad: content_pad)
   cf()
   text-transform uppercase
   font-size .8em
@@ -260,13 +266,27 @@ footer
   padding-bottom 10px
 
   .event-network
-    col(1/3)
+    +below(640px)
+      col(2/3, offset: 1/4)
+    +above(641px)
+      col(1/3)
+
   .event-copyright
-    col(1/3)
+    +below(640px)
+      col(2/3)
+    +above(641px)
+      col(1/3)
+
   .event-credits
-    col(1/3)
+    +below(640px)
+      col(1/3)
+    +above(641px)
+      col(1/3)
 
 // Social Networks
+.event-network-list
+  //
+
 .event-network-item
   span(1/3)
   margin-left 10px
@@ -274,6 +294,29 @@ footer
   width 32px
   height 32px
   background primary_color
+  transition: all .3s
+
+  &:hover
+    background #333
+
+.network-item
+  background url('../images/sprites-networks.png') no-repeat
+  height 24px
+  margin 4px
+
+.network-facebook
+  background-position 0px 0px
+  width 12px
+  margin-left 10px
+
+.network-instagram
+  background-position 0px -27px
+  width 24px
+
+.network-youtube
+  background-position 0px -54px
+  width 26px
+  margin-left 3px
 
 .event-copyright
   text-align center !important
@@ -281,6 +324,8 @@ footer
 
 // Estudio 86
 .event-credits
+  cf()
+
   .estudio-86
     float:right
     height 32px
