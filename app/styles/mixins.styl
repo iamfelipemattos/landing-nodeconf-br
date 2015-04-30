@@ -1,0 +1,18 @@
+//Mixins
+
+base_title()
+  font-size title_size
+  +below(480px)
+    font-size 2em
+  text-transform uppercase
+  font-weight bold
+  text-align center
+  padding-top 30px
+  font-family primary_font, sans-serif
+
+base_content()
+  padding-bottom 50px
+  font-size content_size
+  text-align justify
+  text-align left
+  font-family main_font, sans-serif
