@@ -1,0 +1,77 @@
+// Footer
+footer
+  center(content_width, pad: content_pad)
+  cf()
+  text-transform uppercase
+  font-size .8em
+  font-weight bold
+  padding-top 10px
+  padding-bottom 10px
+
+  .event-network
+    +below(640px)
+      col(2/3, offset: 1/4)
+    +above(641px)
+      col(1/3)
+
+  .event-copyright
+    +below(640px)
+      col(2/3)
+    +above(641px)
+      col(1/3)
+
+  .event-credits
+    +below(640px)
+      col(1/3)
+    +above(641px)
+      col(1/3)
+
+// Social Networks
+.event-network-list
+  //
+
+.event-network-item
+  span(1/3)
+  margin-left 10px
+  border-radius 5px
+  width 32px
+  height 32px
+  background primary_color
+  transition: all .3s
+
+  &:hover
+    background #333
+
+.network-item
+  background url('../images/sprites-networks.png') no-repeat
+  height 24px
+  margin 4px
+
+.network-facebook
+  background-position 0px 0px
+  width 12px
+  margin-left 10px
+
+.network-instagram
+  background-position 0px -27px
+  width 24px
+
+.network-youtube
+  background-position 0px -54px
+  width 26px
+  margin-left 3px
+
+.event-copyright
+  text-align center !important
+  line-height 32px
+
+// Estudio 86
+.event-credits
+  cf()
+
+  .estudio-86
+    float:right
+    height 32px
+    width 32px
+    background url('../images/86.svg') no-repeat center
+    background-size 100%

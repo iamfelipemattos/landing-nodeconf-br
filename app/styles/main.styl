@@ -1,59 +1,24 @@
 @import 'jeet'
+@import 'variables'
+@import 'mixins'
+@import 'intro'
+@import 'evento'
+@import 'newsletter'
+@import 'footer'
 
-/*
-  Variables
-*/
 
-// Sizes
-title_size      = 2.5em
-content_size    = 1.3em
-content_width   = 960px
-content_pad  = 30px
-
-// Colors
-primary_color   = #93b93a
-secondary_color = #6A862A
-
-// Fonts
-main_font    = 'Open Sans'
-primary_font = 'Montserrat'
-
-/*
-  Mixins
-*/
-base_title()
-  font-size title_size
-  +below(480px)
-    font-size 2em
-  text-transform uppercase
-  font-weight bold
-  text-align center
-  padding-top 30px
-  font-family primary_font, sans-serif
-
-base_content()
-  padding-bottom 50px
-  font-size content_size
-  text-align justify
-  text-align left
-  font-family main_font, sans-serif
-
-/*
-  Basic Theme Styles
-*/
-body
+body, html
   margin 0
   padding 0
   font-size 100%
   font-family main_font, sans-serif
-
-header
+  position relative
+  height 100%
   min-height 100%
-  text-transform uppercase
-  color white
-  font-family primary_font, sans-serif
-  cf()
 
+main
+  position relative
+  z-index 2
 section
   cf()
 
@@ -69,6 +34,7 @@ section
   margin-bottom 75px
 
 .partner-button
+  display: inline-block;
   font-family primary_font, sans-serif
   color white
   text-transform uppercase
@@ -110,225 +76,12 @@ section
   Sections
 */
 
-// Intro
-.event-cover
-  background url('../images/bg-header.jpg') no-repeat
-  background-size cover
-  text-align center
 
-  .content
-    padding-top 25px
-    padding-bottom 70px
 
-.event-logo
-  margin 0 auto
-  max-width 100%
-  width 450px
-  height 200px
-  background url('../images/logo.svg') no-repeat center transparent
-  background-size 100%
 
-.event-theme
-  font-size 1.8em
 
-.event-name
-  color primary_color
 
-.event-info
-  font-size 1.5em
-  margin-top 15px
-  margin-bottom 50px
-  color secondary_color
 
-.event-price
-  font-weight bold
 
-.event-tickets
-  color #FFF
 
-.event-date
-  font-size 1.5em
 
-// About
-
-#event-about
-  background url('../images/bg-event.jpg') no-repeat
-  background-size cover
-
-.event-about-title
-  color white
-  base_title()
-
-.event-about-content
-  color white
-  base_content()
-  text-align justify
-
-// Partners
-
-#event-partner
-  background-color white
-
-.event-partner-title
-  color #333
-  base_title()
-
-.partner-list
-  margin-top 50px
-  padding 0
-
-.partner-item
-  +above(641px)
-    col(1/3, cycle: 3)
-  +below(640px)
-    col(1/2, cycle: 2)
-
-  list-style none
-  text-align center !important
-  background-color #f9f9f9
-  height 150px
-  margin-bottom 3%
-  line-height 150px
-
-  img
-    vertical-align middle
-    max-width 100%
-    height auto
-
-.event-partner-content
-  base_content()
-  cf()
-
-// NewsLetter
-
-#event-newsletter
-  background-color #82b927
-
-.event-newsletter-title
-  color #333
-  base_title()
-
-.event-newsletter-content
-  base_content()
-  font-size 1em
-
-.event-newsletter-signup
-  cf()
-  .newsletter-input
-    font-family primary_font, sans-serif
-    color #333
-    border 0
-    line-height 50px
-    box-sizing border-box
-    border-radius 5px
-    padding-left 15px
-    padding-right 15px
-    +above(641px)
-
-      &:first-child
-        col(1/4, offset: 1/6, gutter: 1)
-
-      col(1/4, gutter: 1)
-      shift()
-
-    +below(640px)
-      margin-bottom 7px
-      stack()
-
-  .newsletter-button
-    +below(640px)
-      stack()
-    font-family primary_font, sans-serif
-    color #333
-    text-transform uppercase
-    font-size 1em
-    text-decoration none
-    padding 15px 20px
-    border 2px solid #333
-    border-radius 5px
-    background transparent
-    transition all .3s ease-out
-
-    &:hover
-      cursor pointer
-      color #82b927
-      border 2px solid #333
-      background #333
-
-// Footer
-footer
-  center(content_width, pad: content_pad)
-  cf()
-  text-transform uppercase
-  font-size .8em
-  font-weight bold
-  padding-top 10px
-  padding-bottom 10px
-
-  .event-network
-    +below(640px)
-      col(2/3, offset: 1/4)
-    +above(641px)
-      col(1/3)
-
-  .event-copyright
-    +below(640px)
-      col(2/3)
-    +above(641px)
-      col(1/3)
-
-  .event-credits
-    +below(640px)
-      col(1/3)
-    +above(641px)
-      col(1/3)
-
-// Social Networks
-.event-network-list
-  //
-
-.event-network-item
-  span(1/3)
-  margin-left 10px
-  border-radius 5px
-  width 32px
-  height 32px
-  background primary_color
-  transition: all .3s
-
-  &:hover
-    background #333
-
-.network-item
-  background url('../images/sprites-networks.png') no-repeat
-  height 24px
-  margin 4px
-
-.network-facebook
-  background-position 0px 0px
-  width 12px
-  margin-left 10px
-
-.network-instagram
-  background-position 0px -27px
-  width 24px
-
-.network-youtube
-  background-position 0px -54px
-  width 26px
-  margin-left 3px
-
-.event-copyright
-  text-align center !important
-  line-height 32px
-
-// Estudio 86
-.event-credits
-  cf()
-
-  .estudio-86
-    float:right
-    height 32px
-    width 32px
-    background url('../images/86.svg') no-repeat center
-    background-size 100%
