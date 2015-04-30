@@ -16,3 +16,24 @@ base_content()
   text-align justify
   text-align left
   font-family main_font, sans-serif
+
+base_button()
+  font-family primary_font, sans-serif
+  text-transform uppercase
+  font-size 1em
+  text-decoration none
+  padding 15px 20px
+  border-radius 5px
+  background-color transparent
+  transition all .3s ease-out
+
+  +below(330px)
+    font-size .9em
+
+  +below(500px)
+    stack()
+    box-sizing border-box
+    margin-bottom 10px
+
+  &:hover
+    cursor pointer
