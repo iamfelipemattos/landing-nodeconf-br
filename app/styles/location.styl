@@ -1,0 +1,38 @@
+#event-location
+  /*background url('../images/bg-event.jpg') no-repeat
+  background-size cover*/
+  background #eee
+
+.event-location-title
+  color #333
+  base_title()
+
+
+.event-location-content
+  base_content()
+  cf()
+
+.location-list
+  margin-top 50px
+  padding 0
+
+.location-item
+  cf()
+  +above(641px)
+    col(1/6)
+  +below(640px)
+    col(1/4, offset:1/16)
+
+  list-style none
+  text-align center !important
+  border-radius 5px
+  height 150px
+  margin-bottom 3%
+  line-height 150px
+
+  .location-photo
+    vertical-align middle
+    max-width 100%
+    height auto
+    border-radius 50%
+    border 7px solid #fff

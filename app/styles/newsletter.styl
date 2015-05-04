@@ -1,0 +1,35 @@
+// NewsLetter
+
+#event-newsletter
+  background-color #82b927
+
+.event-newsletter-title
+  color #333
+  base_title()
+
+.event-newsletter-content
+  base_content()
+  font-size 1em
+
+.event-newsletter-signup
+  cf()
+  .newsletter-input
+    font-family primary_font, sans-serif
+    color #333
+    border 0
+    line-height 50px
+    box-sizing border-box
+    border-radius 5px
+    padding-left 15px
+    padding-right 15px
+    +above(641px)
+
+      &:first-child
+        col(1/4, offset: 1/6, gutter: 1)
+
+      col(1/4, gutter: 1)
+      shift()
+
+    +below(640px)
+      margin-bottom 7px
+      stack()

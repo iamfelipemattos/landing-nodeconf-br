@@ -1,0 +1,33 @@
+.event-button
+  width 100%
+  text-align center
+  margin-bottom 75px
+
+.button-main
+  base_button()
+  color #FFF
+  border 2px solid #93b93a
+
+  &:hover
+    background-color #93b93a
+
+.button-alt
+  base_button()
+  color #333
+  border 2px solid #333
+
+  &:hover
+    color #FFF
+    background #333
+
+.button-secondary
+  @extends .button-main
+
+  color #333
+  border 2px solid #333
+
+  &:hover
+    cursor pointer
+    color #82b927
+    border 2px solid #333
+    background #333
