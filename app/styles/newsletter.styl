@@ -15,6 +15,7 @@
   cf()
   .newsletter-input
     font-family primary_font, sans-serif
+    font-size 1em
     color #333
     border 0
     line-height 50px
@@ -23,11 +24,17 @@
     padding-left 15px
     padding-right 15px
     +above(641px)
+      col(2/5, gutter: 1)
+      shift()
 
-      &:first-child
-        col(1/4, offset: 1/6, gutter: 1)
+    +below(640px)
+      margin-bottom 7px
+      stack()
 
-      col(1/4, gutter: 1)
+  .newsletter-button
+    text-align center !important
+    +above(641px)
+      col(1/5, gutter: 1)
       shift()
 
     +below(640px)

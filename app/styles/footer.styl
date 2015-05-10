@@ -2,6 +2,7 @@
 footer
   center(content_width, pad: content_pad)
   cf()
+  background #fff
   text-transform uppercase
   font-size .8em
   font-weight bold
@@ -9,10 +10,7 @@ footer
   padding-bottom 10px
 
   .event-network
-    +below(640px)
-      col(2/3, offset: 1/4)
-    +above(641px)
-      col(1/3)
+    col(1/3, cycle: 3)
 
   .event-copyright
     +below(640px)
@@ -28,7 +26,7 @@ footer
 
 // Social Networks
 .event-network-list
-  //
+  cf()
 
 .event-network-item
   span(1/3)
